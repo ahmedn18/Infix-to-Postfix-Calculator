@@ -64,7 +64,7 @@ After compilation, you can run the program using the following command:
 
 ### Expression Validation:
 
-- `isMatchingPair(char character0, char character2)`: Checks if two characters are matching parentheses.
+- `isMatchingPair(char ch1, char ch2)`: Checks if two characters are matching parentheses.
 - `isBalancedExpression(char *exp)`: Checks if the expression has balanced parentheses.
 
 ### Menu and Calculator Functions:

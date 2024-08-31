@@ -182,12 +182,12 @@ int menu() {
 }
 
 
-int isMatchingPair(char character0, char character2) {
-    if (character0 == '(' && character2 == ')')
+int isMatchingPair(char ch1, char ch2) {
+    if (ch1 == '(' && ch2 == ')')
         return 0;
-    else if (character0 == '{' && character2 == '}')
+    else if (ch1 == '{' && ch2 == '}')
         return 0;
-    else if (character0 == '[' && character2 == ']')
+    else if (ch1 == '[' && ch2 == ']')
         return 0;
     else
         return -1;
