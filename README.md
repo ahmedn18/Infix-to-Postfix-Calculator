@@ -91,6 +91,10 @@ Value : 19.00
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## Contributors
+- Ahmed Nader Adly (@ahmedn18) - Contributor.
+- Mazen Azhary (@Mazen-Azhary) - Contributor.
+
 ## Contact
 
 For any questions or issues, please contact es-ahmed.nader2027@alexu.edu.eg.
