@@ -35,10 +35,12 @@ After compilation, you can run the program using the following command:
 ```bash
 ./infix_calculator
 ```
+```
 Follow the on-screen instructions:
 
 Calculate expression: Enter 1 to input an infix expression and get the postfix conversion and evaluation result.
 Exit: Enter 2 to exit the program.
+```
 
 ## Code Explanation
 
@@ -91,6 +93,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-For any questions or issues, please contact your-email@example.com.
-```
+For any questions or issues, please contact es-ahmed.nader2027@alexu.edu.eg.
 
