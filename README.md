@@ -35,5 +35,62 @@ After compilation, you can run the program using the following command:
 ```bash
 ./infix_calculator
 ```
+Follow the on-screen instructions:
 
+Calculate expression: Enter 1 to input an infix expression and get the postfix conversion and evaluation result.
+Exit: Enter 2 to exit the program.
+
+## Code Explanation
+
+### Stack Operations:
+
+- `initialize()`: Initializes a new stack.
+- `NewNode(float data)`: Creates a new node for the stack.
+- `isEmpty(Stack *s)`: Checks if the stack is empty.
+- `peek(Stack *s)`: Returns the top value of the stack without removing it.
+- `pop(Stack *s)`: Removes and returns the top value of the stack.
+- `push(Stack *s, float value)`: Pushes a new value onto the stack.
+- `destructStack(Stack *s)`: Frees all nodes in the stack and the stack itself.
+
+### Infix to Postfix Conversion:
+
+- `infixToPostfix(char *infix)`: Converts an infix expression to postfix notation using the Shunting-yard algorithm.
+
+### Postfix Evaluation:
+
+- `evaluatePostfix(char *postfixExpression)`: Evaluates a postfix expression.
+
+### Expression Validation:
+
+- `isMatchingPair(char character0, char character2)`: Checks if two characters are matching parentheses.
+- `isBalancedExpression(char *exp)`: Checks if the expression has balanced parentheses.
+
+### Menu and Calculator Functions:
+
+- `menu()`: Displays a menu and gets user choice.
+- `calculator()`: Manages user interaction, processes expressions, and displays results.
+
+## Example
+
+Input:
+
+```plaintext
+( 3 + 4 ) * 5 - 6 / 2
+```
+
+Output:
+
+```plaintext
+Output (Postfix): 3 4 + 5 * 6 2 / - 
+Value : 19.00
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For any questions or issues, please contact your-email@example.com.
+```
 
