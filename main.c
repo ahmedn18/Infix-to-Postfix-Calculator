@@ -25,8 +25,8 @@ Stack *initialize() {
 
 Node *NewNode(float data) {
     Node *n = malloc(sizeof(Node));
-    n->next = NULL;
-    n->data = data;
+    n -> next = NULL;
+    n -> data = data;
     return n;
 }
 
@@ -184,34 +184,40 @@ int menu() {
 
 int isMatchingPair(char ch1, char ch2) {
     if (ch1 == '(' && ch2 == ')')
-        return 0;
+        return 1;
     else if (ch1 == '{' && ch2 == '}')
-        return 0;
+        return 1;
     else if (ch1 == '[' && ch2 == ']')
-        return 0;
+        return 1;
     else
-        return -1;
+        return 0;
 }
 
 int isBalancedExpression(char *exp) {
-    int i = 0;
-    Stack *s = initialize();
+  int i = 0;
+  Stack *s = initialize();
+  if (!s) {
+    printf("Memory allocation error\n");
+    return 0;  
+  }
 
-    while (exp[i] != '\0') {
-        if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[')
-            push(s, exp[i]);
-        if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
-            if (isEmpty(s) || (!isMatchingPair((char) pop(s), exp[i])))
-                return 0;
-        }
-        i++;
-    }
+  while (exp[i] != '\0') {
+      if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') {
+          push(s, exp[i]);
+      } else if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
+          if (isEmpty(s) || !isMatchingPair( (char)pop(s), (char)exp[i])) {
+              free(s);
+              printf("No matching bracket or empty stack\n");
+              return 0;
+          }
+      }
+      i++;
+  }
 
-    // If something is left in the stack then the expression is unbalanced (trivial)
-    if (isEmpty(s))
-        return 1; // balanced
-    else
-        return 0; // not balanced
+  int balanced = isEmpty(s); 
+
+  free(s);
+  return balanced;
 }
 
 
